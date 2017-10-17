@@ -1,0 +1,29 @@
+{
+  "name": "ngx-translate-cache",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/repo"
+  },
+  "author": {
+    "name": "Jaime",
+    "email": "jaime.glez.pacheco@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/username/repo/issues"
+  },
+  "main": "ngx-translate-cache.umd.js",
+  "module": "ngx-translate-cache.js",
+  "jsnext:main": "ngx-translate-cache.js",
+  "typings": "ngx-translate-cache.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4",
+    "@ngx-translate/core": "^8.0.0"
+  }
+}

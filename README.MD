@@ -1,4 +1,6 @@
 # ngx-translate-cache
+[![NPM version][npm-version-image]][npm-url]
+[![MIT License][license-image]][license-url]
 
 Based on and extension of [ngx-translate][ngx-translate-url].
 This is basically a simplified version of [localize-router][localize-router-url].
@@ -153,6 +155,12 @@ cookie duration (defined in hours).
 ## License
 
 MIT © [Jaime](mailto:jaime.glez.pacheco@gmail.com)
+
+[npm-url]: https://www.npmjs.com/package/ngx-translate-cache
+[npm-version-image]: https://img.shields.io/npm/v/npm.svg?style=flat
+
+[license-image]: https://img.shields.io/npm/l/express.svg?style=flat
+[license-url]: LICENSE
 
 [ngx-translate-url]: https://github.com/ngx-translate/core
 [localize-router-url]: https://github.com/Greentube/localize-router

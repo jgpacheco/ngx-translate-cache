@@ -1,20 +1,27 @@
 {
   "name": "ngx-translate-cache",
   "version": "0.1.0",
+  "description": "ngx-translate extension to facilitate language cache.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/repo"
+    "url": "https://github.com/jgpacheco/ngx-translate-cache"
   },
   "author": {
     "name": "Jaime",
     "email": "jaime.glez.pacheco@gmail.com"
   },
   "keywords": [
-    "angular"
+    "angular",
+    "angular2",
+    "ng2-translate",
+    "ngx-translate",
+    "translate",
+    "translation",
+    "i18n"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/username/repo/issues"
+    "url": "https://github.com/jgpacheco/ngx-translate-cache/issues"
   },
   "main": "ngx-translate-cache.umd.js",
   "module": "ngx-translate-cache.js",

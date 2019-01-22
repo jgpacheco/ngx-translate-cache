@@ -49,7 +49,7 @@ export class TranslateCacheService {
 
         const currentLang = this.getCachedLanguage() || this.translateService.getBrowserLang();
 
-        if (currentLang) { this.translateService.use(currentLang); }
+        if (currentLang && this.translateService.getLangs().includes(currentLang)) { this.translateService.use(currentLang); }
     }
 
     public getCachedLanguage(): string {

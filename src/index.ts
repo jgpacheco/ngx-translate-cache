@@ -19,7 +19,7 @@ export class TranslateCacheModule {
             providers: [
                 { provide: CACHE_NAME, useValue: config.cacheName },
                 { provide: CACHE_MECHANISM, useValue: config.cacheMechanism },
-                { provide: COOKIE_EXPIRY, useValue: config.cacheMechanism },
+                { provide: COOKIE_EXPIRY, useValue: config.cookieExpiry },
                 TranslateCacheSettings,
                 config.cacheService,
             ]

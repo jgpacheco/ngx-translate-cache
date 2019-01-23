@@ -47,11 +47,9 @@ export class TranslateCacheService {
                 }
             });
 
-        const browserLang = this.translateService.getBrowserLang();
-        this.translateService.use(browserLang);
+        const currentLang = this.getCachedLanguage() || this.translateService.getBrowserLang();
 
-        const cachedLanguage = this.getCachedLanguage();
-        if (cachedLanguage) { this.translateService.use(cachedLanguage); }
+        if (currentLang) { this.translateService.use(currentLang); }
     }
 
     public getCachedLanguage(): string {

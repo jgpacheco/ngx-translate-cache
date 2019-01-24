@@ -9,3 +9,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Change log.
 ### Fixed
 - Browser language overriding cached language issue fixed by @zhukov-vlad.
+- Cookie expiry value ignored big fixed..
+

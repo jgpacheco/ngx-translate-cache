@@ -1,6 +1,6 @@
 {
   "name": "ngx-translate-cache",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "description": "ngx-translate extension to facilitate language cache.",
   "repository": {
     "type": "git",
@@ -26,7 +26,6 @@
   "peerDependencies": {
     "@angular/common": "^9.1.0",
     "@angular/core": "^9.1.0",
-    "tslib": "^1.10.0",
-    "@ngx-translate/core": "^8.0.0"
+    "@ngx-translate/core": ">8.0.0"
   }
 }

@@ -7,8 +7,10 @@ This is basically a simplified version of [localize-router][localize-router-url]
 If you are already using *localize-router* you don't need this extension.
 This extension is aimed only to facilitate language cache with *ngx-translate*.
 
-For Angular 1..8 use ngx-translate-cache: ^0.0.0
-For Angular 9 use ngx-translate-cache: ^9.0.0
+| Angular version | Integration branch | Library version |
+|:---------------:|:------------------:|:---------------:|
+|   8 and below   |     angular1-8     |      ^0.0.0     |
+|        9        |       master       |      ^9.0.0     |
 
 ## Installation
 

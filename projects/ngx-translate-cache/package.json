@@ -1,6 +1,6 @@
 {
   "name": "ngx-translate-cache",
-  "version": "9.0.1",
+  "version": "9.0.2",
   "description": "ngx-translate extension to facilitate language cache.",
   "repository": {
     "type": "git",

@@ -10,6 +10,7 @@ export namespace CacheMechanism {
 export const CACHE_NAME = new InjectionToken<string>('CACHE_NAME');
 export const CACHE_MECHANISM = new InjectionToken<string>('CACHE_MECHANISM');
 export const COOKIE_EXPIRY = new InjectionToken<string>('COOKIE_EXPIRY');
+export const COOKIE_EXPIRE_SESSION = -1;
 
 export interface TranslateCacheConfig {
   cacheService: Provider;
@@ -78,10 +79,16 @@ export class TranslateCacheService {
       const name = encodeURIComponent(this.translateCacheSettings.cacheName);
 
       if (value) {
-        const date: Date = new Date();
+        let cookieString = `${name}=${encodeURIComponent(value)}`;
 
-        date.setTime(date.getTime() + this.translateCacheSettings.cookieExpiry * 3600000);
-        document.cookie = `${name}=${encodeURIComponent(value)};expires=${date.toUTCString()}`;
+        if (this.translateCacheSettings.cookieExpiry !== COOKIE_EXPIRE_SESSION) {
+          const date: Date = new Date();
+
+          date.setTime(date.getTime() + this.translateCacheSettings.cookieExpiry * 3600000);
+          cookieString += `;expires=${date.toUTCString()}`;
+        }
+
+        document.cookie = cookieString;
 
         return;
       }

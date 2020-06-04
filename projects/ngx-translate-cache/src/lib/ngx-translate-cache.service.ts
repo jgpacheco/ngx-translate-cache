@@ -10,6 +10,7 @@ export namespace CacheMechanism {
 export const CACHE_NAME = new InjectionToken<string>('CACHE_NAME');
 export const CACHE_MECHANISM = new InjectionToken<string>('CACHE_MECHANISM');
 export const COOKIE_EXPIRY = new InjectionToken<string>('COOKIE_EXPIRY');
+export const COOKIE_ATTRIBUTES = new InjectionToken<string>('COOKIE_ATTRIBUTES');
 export const COOKIE_EXPIRE_SESSION = -1;
 
 export interface TranslateCacheConfig {
@@ -17,6 +18,7 @@ export interface TranslateCacheConfig {
   cacheName?: string;
   cacheMechanism?: CacheMechanismType;
   cookieExpiry?: number;
+  cookieAttributes?: string;
 }
 
 const DEFAULT_CACHE_NAME = 'lang';
@@ -27,7 +29,8 @@ const DEFAULT_COOKIE_EXPIRY = 720;
 export class TranslateCacheSettings {
   constructor(@Inject(CACHE_NAME) public cacheName: string = DEFAULT_CACHE_NAME,
               @Inject(CACHE_MECHANISM) public cacheMechanism: string = DEFAULT_CACHE_MECHANISM,
-              @Inject(COOKIE_EXPIRY) public cookieExpiry: number = DEFAULT_COOKIE_EXPIRY) {}
+              @Inject(COOKIE_EXPIRY) public cookieExpiry: number = DEFAULT_COOKIE_EXPIRY,
+              @Inject(COOKIE_ATTRIBUTES) public cookieAttributes: string) {}
 }
 
 /* Not injectable */
@@ -86,6 +89,10 @@ export class TranslateCacheService {
 
           date.setTime(date.getTime() + this.translateCacheSettings.cookieExpiry * 3600000);
           cookieString += `;expires=${date.toUTCString()}`;
+        }
+
+        if (this.translateCacheSettings.cookieAttributes) {
+          cookieString += ';' + this.translateCacheSettings.cookieAttributes;
         }
 
         document.cookie = cookieString;

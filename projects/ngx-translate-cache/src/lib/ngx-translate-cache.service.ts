@@ -11,7 +11,6 @@ export const CACHE_NAME = new InjectionToken<string>('CACHE_NAME');
 export const CACHE_MECHANISM = new InjectionToken<string>('CACHE_MECHANISM');
 export const COOKIE_EXPIRY = new InjectionToken<string>('COOKIE_EXPIRY');
 export const COOKIE_ATTRIBUTES = new InjectionToken<string>('COOKIE_ATTRIBUTES');
-export const COOKIE_EXPIRE_SESSION = -1;
 
 export interface TranslateCacheConfig {
   cacheService: Provider;
@@ -84,7 +83,7 @@ export class TranslateCacheService {
       if (value) {
         let cookieString = `${name}=${encodeURIComponent(value)}`;
 
-        if (this.translateCacheSettings.cookieExpiry !== COOKIE_EXPIRE_SESSION) {
+        if (this.translateCacheSettings.cookieExpiry < 0) {
           const date: Date = new Date();
 
           date.setTime(date.getTime() + this.translateCacheSettings.cookieExpiry * 3600000);

@@ -149,7 +149,8 @@ cookie duration (defined in hours).
               },
               cacheName: 'mylang', // default value is 'lang'.
               cacheMechanism: 'Cookie', // default value is 'LocalStorage'.
-              cookieExpiry: 1, // default value is 720, a month.
+              cookieExpiry: 1, // default value is 720, a month, or use 'COOKIE_EXPIRE_SESSION' for session expiry.
+              cookieAttributes: 'SameSite=Strict; Secure' // no default, optional specification of additional attributes.
             })
         ],
         ...

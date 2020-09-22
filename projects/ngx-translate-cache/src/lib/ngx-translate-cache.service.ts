@@ -83,7 +83,7 @@ export class TranslateCacheService {
       if (value) {
         let cookieString = `${name}=${encodeURIComponent(value)}`;
 
-        if (this.translateCacheSettings.cookieExpiry < 0) {
+        if (this.translateCacheSettings.cookieExpiry >= 0) {
           const date: Date = new Date();
 
           date.setTime(date.getTime() + this.translateCacheSettings.cookieExpiry * 3600000);

@@ -10,12 +10,14 @@ export namespace CacheMechanism {
 export const CACHE_NAME = new InjectionToken<string>('CACHE_NAME');
 export const CACHE_MECHANISM = new InjectionToken<string>('CACHE_MECHANISM');
 export const COOKIE_EXPIRY = new InjectionToken<string>('COOKIE_EXPIRY');
+export const COOKIE_ATTRIBUTES = new InjectionToken<string>('COOKIE_ATTRIBUTES');
 
 export interface TranslateCacheConfig {
   cacheService: Provider;
   cacheName?: string;
   cacheMechanism?: CacheMechanismType;
   cookieExpiry?: number;
+  cookieAttributes?: string;
 }
 
 const DEFAULT_CACHE_NAME = 'lang';
@@ -26,7 +28,8 @@ const DEFAULT_COOKIE_EXPIRY = 720;
 export class TranslateCacheSettings {
   constructor(@Inject(CACHE_NAME) public cacheName: string = DEFAULT_CACHE_NAME,
               @Inject(CACHE_MECHANISM) public cacheMechanism: string = DEFAULT_CACHE_MECHANISM,
-              @Inject(COOKIE_EXPIRY) public cookieExpiry: number = DEFAULT_COOKIE_EXPIRY) {}
+              @Inject(COOKIE_EXPIRY) public cookieExpiry: number = DEFAULT_COOKIE_EXPIRY,
+              @Inject(COOKIE_ATTRIBUTES) public cookieAttributes: string) {}
 }
 
 /* Not injectable */
@@ -78,10 +81,20 @@ export class TranslateCacheService {
       const name = encodeURIComponent(this.translateCacheSettings.cacheName);
 
       if (value) {
-        const date: Date = new Date();
+        let cookieString = `${name}=${encodeURIComponent(value)}`;
 
-        date.setTime(date.getTime() + this.translateCacheSettings.cookieExpiry * 3600000);
-        document.cookie = `${name}=${encodeURIComponent(value)};expires=${date.toUTCString()}`;
+        if (this.translateCacheSettings.cookieExpiry >= 0) {
+          const date: Date = new Date();
+
+          date.setTime(date.getTime() + this.translateCacheSettings.cookieExpiry * 3600000);
+          cookieString += `;expires=${date.toUTCString()}`;
+        }
+
+        if (this.translateCacheSettings.cookieAttributes) {
+          cookieString += ';' + this.translateCacheSettings.cookieAttributes;
+        }
+
+        document.cookie = cookieString;
 
         return;
       }

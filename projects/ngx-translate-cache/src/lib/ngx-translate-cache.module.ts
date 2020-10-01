@@ -1,7 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateCacheConfig, CACHE_NAME, CACHE_MECHANISM, COOKIE_EXPIRY,
-  TranslateCacheSettings } from './ngx-translate-cache.service';
+  COOKIE_ATTRIBUTES, TranslateCacheSettings } from './ngx-translate-cache.service';
 
 @NgModule({
   imports: [
@@ -18,6 +18,7 @@ export class TranslateCacheModule {
         { provide: CACHE_NAME, useValue: config.cacheName },
         { provide: CACHE_MECHANISM, useValue: config.cacheMechanism },
         { provide: COOKIE_EXPIRY, useValue: config.cookieExpiry },
+        { provide: COOKIE_ATTRIBUTES, useValue: config.cookieAttributes },
         TranslateCacheSettings,
         config.cacheService,
       ]

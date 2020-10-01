@@ -163,7 +163,7 @@ cookie duration (defined in hours).
 MIT © [Jaime](mailto:jaime.glez.pacheco@gmail.com)
 
 [npm-url]: https://www.npmjs.com/package/ngx-translate-cache
-[npm-version-image]: https://img.shields.io/npm/v/npm.svg?style=flat
+[npm-version-image]: https://badge.fury.io/js/ngx-translate-cache.svg
 
 [license-image]: https://img.shields.io/npm/l/express.svg?style=flat
 [license-url]: LICENSE

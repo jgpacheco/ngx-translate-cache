@@ -24,8 +24,8 @@
     "url": "https://github.com/jgpacheco/ngx-translate-cache/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^14.0.0",
-    "@angular/core": "^14.0.0",
+    "@angular/common": "^15.0.0",
+    "@angular/core": "^15.0.0",
     "@ngx-translate/core": ">=14.0.0"
   }
 }

@@ -1,1 +1,5 @@
-{{ 'WELCOME' | translate }} to {{ title }}!
+<p>{{ 'WELCOME' | translate }} to {{ title }}!</p>
+
+<select [formControl]="languageCtrl">
+    <option *ngFor="let language of languages" [value]="language">{{ language }}</option>
+</select>

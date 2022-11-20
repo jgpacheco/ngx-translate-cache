@@ -6,6 +6,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } from 'ngx-translate-cache';
 
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -33,9 +34,10 @@ export function TranslateCacheFactory(translateService, translateCacheSettings) 
       cacheService: {
         provide: TranslateCacheService,
         useFactory: TranslateCacheFactory,
-        deps: [ TranslateService, TranslateCacheSettings ]
+        deps: [TranslateService, TranslateCacheSettings]
       }
-    })
+    }),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

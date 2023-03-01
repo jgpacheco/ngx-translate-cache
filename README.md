@@ -10,7 +10,8 @@ This extension is aimed only to facilitate language cache with *ngx-translate*.
 | Angular version | Integration branch | Library version |
 |:---------------:|:------------------:|:---------------:|
 |   8 and below   |     angular1-8     |      ^0.0.0     |
-|        9        |       master       |      ^9.0.0     |
+|        9        |     angular9       |      ^9.0.0     |
+|        10       |     angular10      |      ^10.0.0     |
 
 ## Installation
 

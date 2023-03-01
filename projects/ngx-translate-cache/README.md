@@ -10,7 +10,8 @@ This extension is aimed only to facilitate language cache with *ngx-translate*.
 | Angular version | Integration branch | Library version |
 |:---------------:|:------------------:|:---------------:|
 |   8 and below   |     angular1-8     |      ^0.0.0     |
-|        9        |       master       |      ^9.0.0     |
+|        9        |     angular9       |      ^9.0.0     |
+|        10       |     angular10      |      ^10.0.0     |
 
 ## Installation
 
@@ -149,7 +150,8 @@ cookie duration (defined in hours).
               },
               cacheName: 'mylang', // default value is 'lang'.
               cacheMechanism: 'Cookie', // default value is 'LocalStorage'.
-              cookieExpiry: 1, // default value is 720, a month.
+              cookieExpiry: 1, // default value is 720, a month. Set to a negative value and the cookie becomes a session cookie.
+              cookieAttributes: 'SameSite=Strict; Secure' // no default, optional specification of additional attributes.
             })
         ],
         ...
@@ -162,7 +164,7 @@ cookie duration (defined in hours).
 MIT © [Jaime](mailto:jaime.glez.pacheco@gmail.com)
 
 [npm-url]: https://www.npmjs.com/package/ngx-translate-cache
-[npm-version-image]: https://img.shields.io/npm/v/npm.svg?style=flat
+[npm-version-image]: https://badge.fury.io/js/ngx-translate-cache.svg
 
 [license-image]: https://img.shields.io/npm/l/express.svg?style=flat
 [license-url]: LICENSE

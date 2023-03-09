@@ -9,7 +9,7 @@
       "sourceRoot": "projects/ngx-translate-cache/src",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ngx-translate-cache/tsconfig.lib.json",
             "project": "projects/ngx-translate-cache/ng-package.json"
@@ -17,8 +17,10 @@
           "configurations": {
             "production": {
               "tsConfig": "projects/ngx-translate-cache/tsconfig.lib.prod.json"
-            }
-          }
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -95,19 +97,24 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
-          }
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-translate-cache-example:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "ngx-translate-cache-example:build:production"
+            },
+            "development": {
+              "browserTarget": "ngx-translate-cache-example:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -148,14 +155,17 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/ngx-translate-cache-example/e2e/protractor.conf.js",
-            "devServerTarget": "ngx-translate-cache-example:serve"
+            "protractorConfig": "projects/ngx-translate-cache-example/e2e/protractor.conf.js"
           },
           "configurations": {
             "production": {
               "devServerTarget": "ngx-translate-cache-example:serve:production"
+            },
+            "development": {
+              "devServerTarget": "ngx-translate-cache-example:serve:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         }
       }
     }},

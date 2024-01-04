@@ -57,7 +57,7 @@
             "outputPath": "dist/ngx-translate-cache-example",
             "index": "projects/ngx-translate-cache-example/src/index.html",
             "main": "projects/ngx-translate-cache-example/src/main.ts",
-            "polyfills": "projects/ngx-translate-cache-example/src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/ngx-translate-cache-example/tsconfig.app.json",
             "aot": true,
             "assets": [
@@ -108,10 +108,10 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-translate-cache-example:build:production"
+              "buildTarget": "ngx-translate-cache-example:build:production"
             },
             "development": {
-              "browserTarget": "ngx-translate-cache-example:build:development"
+              "buildTarget": "ngx-translate-cache-example:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -119,14 +119,14 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-translate-cache-example:build"
+            "buildTarget": "ngx-translate-cache-example:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/ngx-translate-cache-example/src/test.ts",
-            "polyfills": "projects/ngx-translate-cache-example/src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/ngx-translate-cache-example/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-translate-cache-example/karma.conf.js",
             "assets": [

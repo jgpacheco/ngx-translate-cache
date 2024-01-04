@@ -14,6 +14,7 @@ This extension is aimed only to facilitate language cache with *ngx-translate*.
 |        10       |     angular10      |      ^10.0.0    |
 |        11       |     angular11      |      ^11.0.0    |
 |        12       |     angular12      |      ^12.0.0    |
+|        13       |     angular13      |      ^13.0.0    |
 
 ## Installation
 

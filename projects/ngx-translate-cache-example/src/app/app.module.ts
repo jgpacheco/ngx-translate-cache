@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } from 'ngx-translate-cache-2';
+import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } from 'ngx-translate-cache';
 
 import { AppComponent } from './app.component';
 

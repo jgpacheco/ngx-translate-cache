@@ -1,15 +1,12 @@
 {
-  "name": "ngx-translate-cache",
-  "version": "17.0.0",
-  "description": "ngx-translate extension to facilitate language cache.",
+  "name": "ngx-translate-cache-2",
+  "version": "18.0.0",
+  "description": "ngx-translate extension to facilitate language cache for angular v18 and onwards.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jgpacheco/ngx-translate-cache"
+    "url": "https://github.com/AhmedHani-dev/ngx-translate-cache"
   },
-  "author": {
-    "name": "Jaime",
-    "email": "jaime.glez.pacheco@gmail.com"
-  },
+  "author": "Ahmed Hani <ahany1111@gmail.com>",
   "keywords": [
     "angular",
     "angular2",
@@ -17,15 +14,16 @@
     "ngx-translate",
     "translate",
     "translation",
-    "i18n"
+    "i18n",
+    "angular-18"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jgpacheco/ngx-translate-cache/issues"
+    "url": "https://github.com/AhmedHani-dev/ngx-translate-cache/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^17.0.0",
-    "@angular/core": "^17.0.0",
+    "@angular/common": "^18.0.0",
+    "@angular/core": "^18.0.0",
     "@ngx-translate/core": ">=14.0.0"
   }
 }

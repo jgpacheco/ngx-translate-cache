@@ -5,7 +5,7 @@
   "projects": {
     "ngx-translate-cache": {
       "projectType": "library",
-      "root": "projects/ngx-translate-cache",
+      "root": "projects/ngx-translate-cache-2",
       "sourceRoot": "projects/ngx-translate-cache/src",
       "architect": {
         "build": {

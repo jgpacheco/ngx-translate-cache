@@ -1,6 +1,16 @@
-# ngx-translate-cache
+# ngx-translate-cache-2
 [![NPM version][npm-version-image]][npm-url]
 [![MIT License][license-image]][license-url]
+
+Forked from: https://github.com/jgpacheco/ngx-translate-cache. The latest original version is not compatible with Angular 18.
+
+| Angular version | `ngx-translate-cache-2` version |
+|:---------------:|:---------------:|
+|        18       |      ^18.0.0    |
+
+Parent project library [(ngx-translate-cache)](https://www.npmjs.com/package/ngx-translate-cache/)
+
+Description for parent project below:
 
 Based on and extension of [ngx-translate][ngx-translate-url].
 This is basically a simplified version of [localize-router][localize-router-url].
@@ -170,8 +180,8 @@ cookie duration (defined in hours).
 
 MIT © [Jaime](mailto:jaime.glez.pacheco@gmail.com)
 
-[npm-url]: https://www.npmjs.com/package/ngx-translate-cache
-[npm-version-image]: https://badge.fury.io/js/ngx-translate-cache.svg
+[npm-url]: https://www.npmjs.com/package/ngx-translate-cache-2
+[npm-version-image]: https://badge.fury.io/js/ngx-translate-cache-2.svg
 
 [license-image]: https://img.shields.io/npm/l/express.svg?style=flat
 [license-url]: LICENSE

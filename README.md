@@ -9,17 +9,18 @@ This extension is aimed only to facilitate language cache with *ngx-translate*.
 
 | Angular version | Integration branch | Library version |
 |:---------------:|:------------------:|:---------------:|
-|   8 and below   |     angular1-8     |      ^0.0.0     |
-|        9        |     angular9       |      ^9.0.0     |
-|        10       |     angular10      |      ^10.0.0    |
-|        11       |     angular11      |      ^11.0.0    |
-|        12       |     angular12      |      ^12.0.0    |
-|        13       |     angular13      |      ^13.0.0    |
-|        14       |     angular14      |      ^14.0.0    |
-|        15       |     angular15      |      ^15.0.0    |
-|        16       |     angular16      |      ^16.0.0    |
-|        17       |     angular17      |      ^17.0.0    |
-|        18       |     angular18      |      ^18.0.0    |
+|   8 and below   |     angular1-8     |     ^0.0.0      |
+|        9        |      angular9      |     ^9.0.0      |
+|       10        |     angular10      |     ^10.0.0     |
+|       11        |     angular11      |     ^11.0.0     |
+|       12        |     angular12      |     ^12.0.0     |
+|       13        |     angular13      |     ^13.0.0     |
+|       14        |     angular14      |     ^14.0.0     |
+|       15        |     angular15      |     ^15.0.0     |
+|       16        |     angular16      |     ^16.0.0     |
+|       17        |     angular17      |     ^17.0.0     |
+|       18        |     angular18      |     ^18.0.0     |
+|       19        |     angular19      |     ^19.0.0     |
 
 ## Installation
 

@@ -52,11 +52,12 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ngx-translate-cache-example",
+            "outputPath": {
+              "base": "dist/ngx-translate-cache-example"
+            },
             "index": "projects/ngx-translate-cache-example/src/index.html",
-            "main": "projects/ngx-translate-cache-example/src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "projects/ngx-translate-cache-example/tsconfig.app.json",
             "aot": true,
@@ -67,7 +68,8 @@
             "styles": [
               "projects/ngx-translate-cache-example/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "browser": "projects/ngx-translate-cache-example/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -83,8 +85,6 @@
               "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",

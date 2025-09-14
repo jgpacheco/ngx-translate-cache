@@ -8,31 +8,33 @@ import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } f
 import { AppComponent } from './app.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }
 
 export function TranslateCacheFactory(translateService, translateCacheSettings) {
-    return new TranslateCacheService(translateService, translateCacheSettings);
+  return new TranslateCacheService(translateService, translateCacheSettings);
 }
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
-        TranslateCacheModule.forRoot({
-            cacheService: {
-                provide: TranslateCacheService,
-                useFactory: TranslateCacheFactory,
-                deps: [TranslateService, TranslateCacheSettings]
-            }
-        })], providers: [provideHttpClient(withInterceptorsFromDi())]
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    }),
+    TranslateCacheModule.forRoot({
+        cacheService: {
+            provide: TranslateCacheService,
+            useFactory: TranslateCacheFactory,
+            deps: [TranslateService, TranslateCacheSettings]
+        }
+    })
+  ],
+  providers: [provideHttpClient(withInterceptorsFromDi())]
 })
 export class AppModule { }
